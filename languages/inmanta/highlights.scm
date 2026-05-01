@@ -49,6 +49,7 @@
 (matching_kw) @keyword.operator
 (is_kw) @keyword.operator
 (defined_kw) @keyword.operator
+(self_kw) @variable.special
 
 ; ── Operators ─────────────────────────────────────────────────────────────────
 (cmp_op) @operator
