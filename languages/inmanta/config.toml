@@ -1,0 +1,4 @@
+name = "Inmanta"
+grammar = "inmanta"
+path-suffixes = ["cf"]
+line-comments = ["# "]

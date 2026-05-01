@@ -1,0 +1,12 @@
+schema_version = 1
+id = "inmanta"
+name = "Inmanta"
+version = "0.1.0"
+description = "Inmanta language support for Zed"
+authors = ["Inmanta"]
+
+[grammars.inmanta]
+repository = "https://github.com/DariushMoh/tree-sitter-inmanta.git"
+commit = "e179797b6b7a27a726d97c42670c037e4e38ac71"
+
+languages = ["languages/inmanta"]
