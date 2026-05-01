@@ -21,22 +21,6 @@
 (false_kw) @boolean
 (undef_kw) @constant.builtin
 
-; ── Namespaces ────────────────────────────────────────────────────────────────
-; Import statement path
-(import_stmt (id) @type)
-(import_stmt (sep) @type)
-(import_stmt (cid) @type)
-
-; Namespaced class refs
-(class_ref (id) @type)
-(class_ref (sep) @type)
-
-; Namespaced refs in attribute types
-(attr_base_type (ns_ref (id) @type))
-
-; Namespaced refs in implement using list
-(implement_ns_list (ns_ref (id) @type))
-
 ; ── Types ─────────────────────────────────────────────────────────────────────
 (cid) @type
 (id) @variable
@@ -75,15 +59,22 @@
 (minus_op) @operator
 (division_op) @operator
 (mod_op) @operator
+(colon) @keyword.operator
+(arity_colon) @operator
+(ternary_then) @operator
+(ternary_else) @operator
 
 ; ── Punctuation ───────────────────────────────────────────────────────────────
-"(" @punctuation.bracket
-")" @punctuation.bracket
-"[" @punctuation.bracket
-"]" @punctuation.bracket
-"{" @punctuation.bracket
-"}" @punctuation.bracket
+(call_open) @keyword.operator
+(call_close) @keyword.operator
+(dict_open) @keyword.operator
+(dict_close) @keyword.operator
+(lookup_open) @keyword.operator
+(lookup_close) @keyword.operator
+(arity_open) @keyword.operator
+(arity_close) @keyword.operator
+(list_open) @keyword.operator
+(list_close) @keyword.operator
 "," @punctuation.delimiter
 "." @punctuation.delimiter
 (sep) @punctuation.delimiter
-":" @punctuation.delimiter
