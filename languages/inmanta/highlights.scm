@@ -1,3 +1,5 @@
+(attr_type_builtin) @type.builtin
+
 ; ── Comments ──────────────────────────────────────────────────────────────────
 (comment) @comment
 ((comment) @comment.todo (#match? @comment.todo "TODO"))
@@ -18,6 +20,22 @@
 (true_kw) @boolean
 (false_kw) @boolean
 (undef_kw) @constant.builtin
+
+; ── Namespaces ────────────────────────────────────────────────────────────────
+; Import statement path
+(import_stmt (id) @type)
+(import_stmt (sep) @type)
+(import_stmt (cid) @type)
+
+; Namespaced class refs
+(class_ref (id) @type)
+(class_ref (sep) @type)
+
+; Namespaced refs in attribute types
+(attr_base_type (ns_ref (id) @type))
+
+; Namespaced refs in implement using list
+(implement_ns_list (ns_ref (id) @type))
 
 ; ── Types ─────────────────────────────────────────────────────────────────────
 (cid) @type
@@ -47,7 +65,6 @@
 (matching_kw) @keyword.operator
 (is_kw) @keyword.operator
 (defined_kw) @keyword.operator
-(dict_kw) @keyword.type
 
 ; ── Operators ─────────────────────────────────────────────────────────────────
 (cmp_op) @operator

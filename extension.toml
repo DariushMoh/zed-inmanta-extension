@@ -7,6 +7,6 @@ authors = ["Inmanta"]
 
 [grammars.inmanta]
 repository = "https://github.com/DariushMoh/tree-sitter-inmanta.git"
-commit = "e179797b6b7a27a726d97c42670c037e4e38ac71"
+commit = "ff16429f520a597eb71666e09a58f526bb1844cc"
 
 languages = ["languages/inmanta"]
