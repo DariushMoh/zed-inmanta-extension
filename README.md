@@ -49,3 +49,12 @@ However you can easily make it automatic by adding this one line in zed settings
      }
    }
 ```
+
+### Troubleshooting
+It may be that the features of language server do not work and no obvious errors can be found in `zed > open log` menu.
+In this case this command may be handy:
+```
+ls -t /tmp/vscode-inmanta-*.log | head -1 | xargs grep -i "compil\|error\|success\|anchor" | tail -200
+```
+it will show any error from the language server logs, this may be helpful to debug it.
+It will most often be due to some missing python packages in the env.
