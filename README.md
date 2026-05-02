@@ -26,3 +26,26 @@ However you can easily make it automatic by adding this one line in zed settings
     ...
   },
 ```
+
+## Language Server
+
+### Setup
+
+1. Create a Python 3.12 (or newer, depending on the version of inmanta-core you need) virtualenv and install inmantals (or use an existing env):
+```bash
+   python3.12 -m venv ~/.virtualenvs/inmantals
+   ~/.virtualenvs/inmantals/bin/pip install inmantals setuptools wheel
+```
+
+2. Add to your Zed `settings.json`:
+```json
+   {
+     "lsp": {
+       "inmanta-language-server": {
+         "settings": {
+           "pythonPath": "~/.virtualenvs/inmantals/bin/python"
+         }
+       }
+     }
+   }
+```

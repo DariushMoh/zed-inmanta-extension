@@ -6,7 +6,12 @@ description = "Inmanta language support for Zed"
 authors = ["Inmanta"]
 
 [grammars.inmanta]
-repository = "https://github.com/DariushMoh/tree-sitter-inmanta.git"
+#repository = "https://github.com/DariushMoh/tree-sitter-inmanta.git"
+repository = "file:///home/riushda/Documents/tree-sitter-inmanta"
 commit = "8e728fdf0151b04e42161ebdf39a885f9b105797"
 
 languages = ["languages/inmanta"]
+
+[language_servers.inmanta-language-server]
+name = "Inmanta Language Server"
+languages = ["Inmanta"]
