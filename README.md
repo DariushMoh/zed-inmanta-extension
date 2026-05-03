@@ -6,6 +6,11 @@ The grammar this extension points to can be found here: https://github.com/Dariu
 
 As explained, the grammar was partially generated using ai which means it may not be entirely stable/correct. Any improvement/feedback is welcome.
 
+## Requirement
+
+Make sure you have `rustup` installed on your system.
+After that execute `rustup-init`. 
+
 ## Installation
 
 1. Git clone this repository
@@ -16,34 +21,24 @@ As explained, the grammar was partially generated using ai which means it may no
 
 Zed will compile the grammar to WASM and activate the extension.
 Open any `.cf` file to verify syntax highlighting is working.
-At this point you may have to select the language manually in the bottom menu bar.
-However you can easily make it automatic by adding this one line in zed settings.json:
-
-```
-  "file_types": {
-    ...
-    "Inmanta": ["cf"],
-    ...
-  },
-```
 
 ## Language Server
 
 ### Setup
 
-1. Create a Python 3.12 (or newer, depending on the version of inmanta-core you need) virtualenv and install inmantals (or use an existing env):
+1. Install inmantals in your env:
 ```bash
-   python3.12 -m venv ~/.virtualenvs/inmantals
-   ~/.virtualenvs/inmantals/bin/pip install inmantals setuptools wheel
+   source .env/bin/activate
+   pip install inmantals setuptools wheel
 ```
 
-2. Add to your Zed `settings.json`:
+2. Add to your Zed project specific `settings.json`:
 ```json
    {
      "lsp": {
        "inmanta-language-server": {
          "settings": {
-           "pythonPath": "~/.virtualenvs/inmantals/bin/python"
+           "pythonPath": "~/.virtualenvs/my-env/bin/python"
          }
        }
      }

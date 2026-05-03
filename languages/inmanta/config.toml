@@ -1,4 +1,4 @@
 name = "Inmanta"
 grammar = "inmanta"
-path-suffixes = ["cf"]
-line-comments = ["# "]
+path_suffixes = ["cf"]
+line_comments = ["# "]
