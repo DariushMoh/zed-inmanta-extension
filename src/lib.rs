@@ -171,7 +171,9 @@ impl zed::Extension for InmantaExtension {
 
         Ok(Some(serde_json::json!({
             "pip": {
-                "use_system_config": true
+                "use_system_config": false,
+                "index_url": "https://artifacts.internal.inmanta.com/inmanta/dev",
+                "pre": true,
             },
             "compilerVenv": compiler_venv
         })))
